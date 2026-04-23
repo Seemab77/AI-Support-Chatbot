@@ -1,0 +1,131 @@
+.chat-message {
+    display: flex;
+    margin-bottom: 12px;
+    animation: fadeIn 0.4s ease-out;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.user-message .message-content {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 20px 20px 6px 20px;
+    max-width: 70%;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.user-message .message-content:hover {
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.bot-message {
+    justify-content: flex-start;
+}
+
+.bot-message .message-content {
+    background: #ffffff;
+    color: #333;
+    border-radius: 20px 20px 20px 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    max-width: 70%;
+}
+
+.bot-message .message-content:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.message-avatar {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.bot-avatar {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.user-avatar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.message-content {
+    padding: 14px 18px;
+    word-wrap: break-word;
+    transition: all 0.2s ease;
+}
+
+.message-text {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.message-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.message-time {
+    opacity: 0.65;
+    font-weight: 400;
+}
+
+.message-intent {
+    opacity: 0.65;
+    font-style: italic;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .chat-message {
+        gap: 8px;
+    }
+
+    .message-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 24px;
+    }
+
+    .user-message .message-content,
+    .bot-message .message-content {
+        max-width: 85%;
+        font-size: 14px;
+    }
+
+    .message-content {
+        padding: 12px 14px;
+    }
+}
