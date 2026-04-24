@@ -16,6 +16,7 @@
     align-items: center;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 20px;
 }
 
 .chatbox-header h1 {
@@ -23,6 +24,12 @@
     font-size: 26px;
     font-weight: 700;
     letter-spacing: -0.5px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .connection-status {
@@ -81,11 +88,12 @@
 .welcome-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 100%;
-    gap: 24px;
-    padding: 40px;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    overflow-y: auto;
 }
 
 .welcome-message {

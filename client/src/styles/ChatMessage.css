@@ -39,25 +39,30 @@
 }
 
 .message-avatar {
-    font-size: 28px;
+    font-size: 12px;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 36px;
     height: 36px;
-    border-radius: 50%;
+    border-radius: 8px;
     flex-shrink: 0;
     animation: fadeIn 0.4s ease-out;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .bot-avatar {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    color: white;
 }
 
 .user-avatar {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
 }
 
 .message-content {

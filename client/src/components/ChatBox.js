@@ -3,6 +3,7 @@ import ChatMessage from './ChatMessage';
 import MessageInput from './MessageInput';
 import QuickReplies from './QuickReplies';
 import ChatStats from './ChatStats';
+import ExportChat from './ExportChat';
 import { chatAPI, createSocketConnection, socketEvents } from '../services/api';
 import '../styles/ChatBox.css';
 
@@ -161,14 +162,17 @@ const ChatBox = () => {
         <div className="chatbox-container">
             <div className="chatbox-header">
                 <h1>AI Support Chatbot</h1>
-                <div className="connection-status">
-                    <span
-                        className={`status-indicator ${isConnected ? 'connected' : 'disconnected'
-                            }`}
-                    ></span>
-                    <span className="status-text">
-                        {isConnected ? 'Connected' : 'Disconnected'}
-                    </span>
+                <div className="header-actions">
+                    {messages.length > 0 && <ExportChat messages={messages} sessionId={sessionId} />}
+                    <div className="connection-status">
+                        <span
+                            className={`status-indicator ${isConnected ? 'connected' : 'disconnected'
+                                }`}
+                        ></span>
+                        <span className="status-text">
+                            {isConnected ? 'Connected' : 'Disconnected'}
+                        </span>
+                    </div>
                 </div>
             </div>
 

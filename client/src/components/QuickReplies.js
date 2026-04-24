@@ -3,17 +3,17 @@ import '../styles/QuickReplies.css';
 
 const QuickReplies = ({ onSelect }) => {
     const suggestions = [
-        { text: 'Hello', icon: '👋' },
-        { text: 'Tell me about your services', icon: 'ℹ️' },
-        { text: 'What is your pricing?', icon: '💰' },
-        { text: 'How can I contact support?', icon: '📞' },
-        { text: 'Do you have a demo?', icon: '🎥' },
-        { text: 'Help me get started', icon: '🚀' }
+        { text: 'Hello', icon: '→' },
+        { text: 'Tell me about your services', icon: '→' },
+        { text: 'What is your pricing?', icon: '→' },
+        { text: 'How can I contact support?', icon: '→' },
+        { text: 'Do you have a demo?', icon: '→' },
+        { text: 'Help me get started', icon: '→' }
     ];
 
     return (
         <div className="quick-replies-container">
-            <p className="quick-replies-label">📌 Quick Replies</p>
+            <p className="quick-replies-label">Suggested Questions</p>
             <div className="quick-replies-grid">
                 {suggestions.map((suggestion, index) => (
                     <button
@@ -22,7 +22,6 @@ const QuickReplies = ({ onSelect }) => {
                         onClick={() => onSelect(suggestion.text)}
                         title={suggestion.text}
                     >
-                        <span className="quick-reply-icon">{suggestion.icon}</span>
                         <span className="quick-reply-text">{suggestion.text}</span>
                     </button>
                 ))}
